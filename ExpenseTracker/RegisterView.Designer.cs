@@ -117,6 +117,7 @@
             this.MaximizeBox = false;
             this.Name = "RegisterView";
             this.Text = "Registration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterView_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

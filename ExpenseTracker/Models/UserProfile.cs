@@ -39,11 +39,16 @@ namespace ExpenseTracker.Models
             DataRow[] results;
             results = this.dbData.User.Select("username = '" + userData.username + "'");
 
-            if (results != null && SecurePasswordHasher.Verify(userData.password, results[0]["password"].ToString()))
+            if (results.Length > 0)
             {
-                hasAuthenticated = true;
-                userId = Int32.Parse(results[0]["id"].ToString());
-                return true;
+                if (SecurePasswordHasher.Verify(userData.password, results[0]["password"].ToString())) {
+                    hasAuthenticated = true;
+                    userId = Int32.Parse(results[0]["id"].ToString());
+                    return true;
+                }  else
+                {
+                    return false;
+                }
             } else
             {
                 return false;

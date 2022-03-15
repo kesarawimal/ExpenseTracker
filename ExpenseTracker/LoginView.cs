@@ -22,6 +22,7 @@ namespace ExpenseTracker
 
         private void AuthenticateUser(object sender, EventArgs e)
         {
+
             if (this.userData == null)
             {
                 this.userData = new UserData();
@@ -37,6 +38,9 @@ namespace ExpenseTracker
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
                 this.Dispose();
+            } else
+            {
+                MessageBox.Show("Please enter valid credentials to proceed.");
             }
         }
 
@@ -45,6 +49,11 @@ namespace ExpenseTracker
             RegisterView registerView = new RegisterView();
             registerView.ShowDialog();
             this.Dispose();
+        }
+
+        private void LoginView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

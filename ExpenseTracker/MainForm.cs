@@ -30,8 +30,12 @@ namespace ExpenseTracker
             if (hasAuthenticated == false)
             {
                 LoginView loginView = new LoginView();
-                //loginView.Show();
-                //this.Hide();
+                loginView.Show();
+                this.Hide();
+            } else
+            {
+                TransactionProfile transactionProfile = new TransactionProfile(dbData);
+                transactionProfile.SeedTransactions();
             }
         }
 
@@ -95,22 +99,7 @@ namespace ExpenseTracker
             if (e.TabPage == dashboard)
             {
 
-                DashboardCalculation dashboardCalculation = new DashboardCalculation(dbData);
-                DashboardData todayDashboardData = dashboardCalculation.TodayDashboardData();
-                this.lblTodayIncome.Text = todayDashboardData.income.ToString() + " USD";
-                this.lblTodayExpense.Text = todayDashboardData.expense.ToString() + " USD";
-                this.lblTodayBalance.Text = todayDashboardData.balance.ToString() + " USD";
-
-                DashboardData yesterdayDashboardData = dashboardCalculation.YesterdayDashboardData();
-                this.lblYesterdayIncome.Text = yesterdayDashboardData.income.ToString() + " USD";
-                this.lblYesterdayExpense.Text = yesterdayDashboardData.expense.ToString() + " USD";
-                this.lblYesterdayBalance.Text = yesterdayDashboardData.balance.ToString() + " USD";
-                
-
-                DashboardData last7daysDashboardData = dashboardCalculation.Last7daysDashboardData();
-                this.lbl7daysIncome.Text = last7daysDashboardData.income.ToString() + " USD";
-                this.lbl7daysExpense.Text = last7daysDashboardData.expense.ToString() + " USD";
-                this.lbl7daysBalance.Text = last7daysDashboardData.balance.ToString() + " USD";
+                DashboardLoad();
 
             }
 
@@ -142,6 +131,26 @@ namespace ExpenseTracker
                 this.chrtWeeklyOverallReport.Series["Income"].Points.AddXY("Last 7 Days", overallIncome);
                 this.chrtWeeklyOverallReport.Series["Expense"].Points.AddXY("Last 7 Days", overallExpense);
             }
+        }
+
+        private void DashboardLoad()
+        {
+            DashboardCalculation dashboardCalculation = new DashboardCalculation(dbData);
+            DashboardData todayDashboardData = dashboardCalculation.TodayDashboardData();
+            this.lblTodayIncome.Text = todayDashboardData.income.ToString() + " USD";
+            this.lblTodayExpense.Text = todayDashboardData.expense.ToString() + " USD";
+            this.lblTodayBalance.Text = todayDashboardData.balance.ToString() + " USD";
+
+            DashboardData yesterdayDashboardData = dashboardCalculation.YesterdayDashboardData();
+            this.lblYesterdayIncome.Text = yesterdayDashboardData.income.ToString() + " USD";
+            this.lblYesterdayExpense.Text = yesterdayDashboardData.expense.ToString() + " USD";
+            this.lblYesterdayBalance.Text = yesterdayDashboardData.balance.ToString() + " USD";
+
+
+            DashboardData last7daysDashboardData = dashboardCalculation.Last7daysDashboardData();
+            this.lbl7daysIncome.Text = last7daysDashboardData.income.ToString() + " USD";
+            this.lbl7daysExpense.Text = last7daysDashboardData.expense.ToString() + " USD";
+            this.lbl7daysBalance.Text = last7daysDashboardData.balance.ToString() + " USD";
         }
 
         private void dtgTransactions_CellContentClick(object sender, DataGridViewCellEventArgs e)

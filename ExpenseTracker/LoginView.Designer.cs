@@ -108,6 +108,7 @@
             this.MaximizeBox = false;
             this.Name = "LoginView";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginView_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
