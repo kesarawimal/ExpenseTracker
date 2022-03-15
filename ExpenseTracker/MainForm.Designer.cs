@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title10 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.dashboard = new System.Windows.Forms.TabPage();
             this.lbl7daysBalance = new System.Windows.Forms.Label();
@@ -420,51 +420,51 @@
             // 
             // chrtWeeklyOverallReport
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chrtWeeklyOverallReport.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chrtWeeklyOverallReport.Legends.Add(legend7);
+            chartArea9.Name = "ChartArea1";
+            this.chrtWeeklyOverallReport.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chrtWeeklyOverallReport.Legends.Add(legend9);
             this.chrtWeeklyOverallReport.Location = new System.Drawing.Point(162, 346);
             this.chrtWeeklyOverallReport.Name = "chrtWeeklyOverallReport";
-            series13.ChartArea = "ChartArea1";
-            series13.Legend = "Legend1";
-            series13.Name = "Income";
-            series14.ChartArea = "ChartArea1";
-            series14.Legend = "Legend1";
-            series14.Name = "Expense";
-            this.chrtWeeklyOverallReport.Series.Add(series13);
-            this.chrtWeeklyOverallReport.Series.Add(series14);
+            series17.ChartArea = "ChartArea1";
+            series17.Legend = "Legend1";
+            series17.Name = "Income";
+            series18.ChartArea = "ChartArea1";
+            series18.Legend = "Legend1";
+            series18.Name = "Expense";
+            this.chrtWeeklyOverallReport.Series.Add(series17);
+            this.chrtWeeklyOverallReport.Series.Add(series18);
             this.chrtWeeklyOverallReport.Size = new System.Drawing.Size(425, 221);
             this.chrtWeeklyOverallReport.TabIndex = 1;
             this.chrtWeeklyOverallReport.Text = "chart1";
-            title7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            title7.Name = "Weekly Overall Report";
-            title7.Text = "Weekly Overall Report";
-            this.chrtWeeklyOverallReport.Titles.Add(title7);
+            title9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            title9.Name = "Weekly Overall Report";
+            title9.Text = "Weekly Overall Report";
+            this.chrtWeeklyOverallReport.Titles.Add(title9);
             // 
             // chrtWeeklyReport
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chrtWeeklyReport.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chrtWeeklyReport.Legends.Add(legend8);
+            chartArea10.Name = "ChartArea1";
+            this.chrtWeeklyReport.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chrtWeeklyReport.Legends.Add(legend10);
             this.chrtWeeklyReport.Location = new System.Drawing.Point(6, 6);
             this.chrtWeeklyReport.Name = "chrtWeeklyReport";
-            series15.ChartArea = "ChartArea1";
-            series15.Legend = "Legend1";
-            series15.Name = "Income";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Expense";
-            this.chrtWeeklyReport.Series.Add(series15);
-            this.chrtWeeklyReport.Series.Add(series16);
+            series19.ChartArea = "ChartArea1";
+            series19.Legend = "Legend1";
+            series19.Name = "Income";
+            series20.ChartArea = "ChartArea1";
+            series20.Legend = "Legend1";
+            series20.Name = "Expense";
+            this.chrtWeeklyReport.Series.Add(series19);
+            this.chrtWeeklyReport.Series.Add(series20);
             this.chrtWeeklyReport.Size = new System.Drawing.Size(744, 334);
             this.chrtWeeklyReport.TabIndex = 0;
             this.chrtWeeklyReport.Text = "chart1";
-            title8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            title8.Name = "Title1";
-            title8.Text = "Weekly Financial Report";
-            this.chrtWeeklyReport.Titles.Add(title8);
+            title10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            title10.Name = "Title1";
+            title10.Text = "Weekly Financial Report";
+            this.chrtWeeklyReport.Titles.Add(title10);
             // 
             // forecasting
             // 
@@ -502,9 +502,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(3, 137);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(126, 17);
+            this.label14.Size = new System.Drawing.Size(264, 34);
             this.label14.TabIndex = 5;
-            this.label14.Text = "Predicted Expense";
+            this.label14.Text = "Predicted Expense (From this day to the selected date)";
             // 
             // lblPredictIncome
             // 
@@ -522,9 +522,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(3, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 17);
+            this.label10.Size = new System.Drawing.Size(255, 34);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Predicted Income";
+            this.label10.Text = "Predicted Income (From this day to the selected date)";
             // 
             // label4
             // 
