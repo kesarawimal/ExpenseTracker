@@ -24,7 +24,7 @@ namespace ExpenseTracker.Models
                 note = "Salary",
                 date = DateTime.Today.ToString("dd/MM/yyyy"),
                 type = "Income",
-                amount = 1000,
+                amount = 800,
                 isReccuring = true
             });
             trasactionDatas.Add(new TransactionData

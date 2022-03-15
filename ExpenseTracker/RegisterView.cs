@@ -40,13 +40,13 @@ namespace ExpenseTracker
             {
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
-                this.Close();
+                this.Dispose();
             }
         }
 
         private void RegisterView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            //System.Windows.Forms.Application.Exit();
         }
     }
 }
