@@ -55,6 +55,33 @@ namespace ExpenseTracker
                 row.period = transactionData.period;
                 row.user_id = this.userProfile.getUserId();
                 this.dbData.Transaction.AddTransactionRow(row);
+
+                if (transactionData.isReccuring)
+                {
+                    for (int i = 1; i <= transactionData.period; i++)
+                    {
+                        DateTime date;
+                        if (transactionData.frequency == "Daily")
+                        {
+                            date = DateTime.ParseExact(transactionData.date, "dd/MM/yyyy", null).AddDays(1 * i);
+                        } else if (transactionData.frequency == "Weekly")
+                        {
+                            date = DateTime.ParseExact(transactionData.date, "dd/MM/yyyy", null).AddDays(7 * i);
+                        } else
+                        {
+                            date = DateTime.ParseExact(transactionData.date, "dd/MM/yyyy", null).AddDays(30 * i);
+                        }
+
+                        ExpenseTrackerData.TransactionRow iRow = this.dbData.Transaction.NewTransactionRow();
+                        iRow.note = transactionData.note;
+                        iRow.date = date.ToString("dd/MM/yyyy");
+                        iRow.type = transactionData.type;
+                        iRow.amount = transactionData.amount;
+                        iRow.isReccuring = transactionData.isReccuring;
+                        iRow.user_id = this.userProfile.getUserId();
+                        this.dbData.Transaction.AddTransactionRow(iRow);
+                    }
+                }
             }
         }
 

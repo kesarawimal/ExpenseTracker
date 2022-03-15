@@ -36,7 +36,7 @@ namespace ExpenseTracker
             {
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
-                this.Close();
+                this.Dispose();
             }
         }
 
@@ -44,7 +44,7 @@ namespace ExpenseTracker
         {
             RegisterView registerView = new RegisterView();
             registerView.ShowDialog();
-            this.Close();
+            this.Dispose();
         }
     }
 }
