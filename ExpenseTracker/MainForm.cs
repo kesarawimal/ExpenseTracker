@@ -146,7 +146,7 @@ namespace ExpenseTracker
 
         private void dtgTransactions_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 6)
             {
                 this.dbData.Transaction.Rows[e.RowIndex].Delete();
             }
